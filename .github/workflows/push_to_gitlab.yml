@@ -15,10 +15,10 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config --global user.name "Your GitHub Username"
-          git config --global user.email "your-email@example.com"
+          git config --global user.name "veeraiahmadamanchi1"
+          git config --global user.email "veeraiahmadamanchi@gmail.com"
 
       - name: Push to GitLab
         run: |
-          git remote add gitlab https://gitlab.com/yourusername/yourrepository.git  # Replace with your GitLab repository URL
+          git remote add gitlab https://gitlab.com/veeraiahmadamanchi1/mirrorTest.git  # Replace with your GitLab repository URL
           git push --force gitlab HEAD:main  # Change main to your target branch on GitLab
