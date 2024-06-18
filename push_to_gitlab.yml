@@ -1,0 +1,24 @@
+name: Push to GitLab
+
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to mirror
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "veeraiahmadamanchi1"
+          git config --global user.email "veeraiahmadamanchi@gmail.com"
+
+      - name: Push to GitLab
+        run: |
+          git remote add gitlab https://gitlab.com/veeraiahmadamanchi1/mirrorTest.git  # Replace with your GitLab repository URL
+          git push --force gitlab HEAD:main  # Change main to your target branch on GitLab
